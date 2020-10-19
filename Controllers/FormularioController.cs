@@ -5,8 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Formulario.Models;
-using Formulario.Data;
+using lab_pc1_campos.Models;
+using lab_pc1_campos.Data;
 namespace lab_pc1_campos.Controllers
 {
     public class FormularioController : Controller
@@ -29,12 +29,12 @@ namespace lab_pc1_campos.Controllers
            public IActionResult Enviar(Formulario objFormulario){
 
                if(ModelState.IsValid){
-                objFormulario.Respuesta = "Gracias, sus datos han sido almacenados.";
+                objFormulario.Respuesta = "Gracias, hemos procesado su solicitud.";
                 _context.Add(objFormulario);
                 _context.SaveChanges();
                }
                
-                 return View("Formulario", objFormulario);
+                 return View("index", objFormulario);
         }
     }
     
