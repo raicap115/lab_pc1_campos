@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-md-4">  
         <h1 class="display-4">Solicitud de Bono</h1>
-        <hr color="black" size=3>
+        <hr color="blue" size=3>
         <form asp-controller="Formulario" asp-action="Enviar">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -31,9 +31,10 @@
             <div class="form-group">
                 Bancos:
                 <select asp-for="Bancos" class="form-control">
-                    <option value="BANBIF">BANBIF</option>
-                    <option value="INTERBANK">INTERBANK</option>
                     <option value="BCP">BCP</option>
+                    <option value="INTERBANK">INTERBANK</option>
+                    <option value="SCOTIABANK">SCOTIABANK</option>
+                    <option value="BANCO DE LA NACIÓN">BANCO DE LA NACIÓN</option>
                 </select>
             </div>
 

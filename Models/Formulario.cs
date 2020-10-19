@@ -4,9 +4,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace lab_pc1_campos.Models
 {
-    [Table("t_solicitu_bono")]
+    [Table("t_solicitud_bono")]
     public class Formulario 
     {
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("id_solicitud")]
+        public int ID { get; set; }
 
         [Required(ErrorMessage="Ingrese su nombre")]  
         [Display(Name="nombre")] 
